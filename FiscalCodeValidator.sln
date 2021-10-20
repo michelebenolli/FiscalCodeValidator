@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiscalCodeValidator", "FiscalCode\FiscalCodeValidator.csproj", "{A97EABF3-CAA8-4D00-8B4C-672EDB051AB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiscalCodeValidator.Tests", "FiscalCode.Tests\FiscalCodeValidator.Tests.csproj", "{FB3878BB-5860-4749-B66C-6DB08993ED90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A97EABF3-CAA8-4D00-8B4C-672EDB051AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97EABF3-CAA8-4D00-8B4C-672EDB051AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97EABF3-CAA8-4D00-8B4C-672EDB051AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97EABF3-CAA8-4D00-8B4C-672EDB051AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3878BB-5860-4749-B66C-6DB08993ED90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3878BB-5860-4749-B66C-6DB08993ED90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3878BB-5860-4749-B66C-6DB08993ED90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3878BB-5860-4749-B66C-6DB08993ED90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EC1C47B-BA5B-4BA7-8A17-D04C60DEE00C}
+	EndGlobalSection
+EndGlobal
