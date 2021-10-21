@@ -1,5 +1,5 @@
 # FiscalCodeValidator
-Fiscal Code Validator can be used to perform a syntactic validation of [Italian fiscal codes][1].
+Fiscal Code Validator can be used to perform a syntactic validation of [Italian fiscal codes](https://en.wikipedia.org/wiki/Italian_fiscal_code "Italian fiscal codes").
 
 ## FiscalCode
 
@@ -50,14 +50,5 @@ bool result = fiscalCode.isValid(gender: Gender.Male); // false
 ```
 
 ### Notes
-1. The validation method considers the [omocodia][2] problem
-2. To verify the *existence* of a fiscal code you can use [this][3] service
-
-## Author
-Michele Benolli<br>
-<michele.benolli@gmail.com>
-
-
-[1]: <https://en.wikipedia.org/wiki/Italian_fiscal_code> "Italian fiscal codes"
-[2]: <https://it.wikipedia.org/wiki/Omocodia> "omocodia"
-[3]: <https://telematici.agenziaentrate.gov.it/VerificaCF/Scegli.do?parameter=verificaCf> "VerificaCf"
+1. The validation method considers the [omocodia](https://it.wikipedia.org/wiki/Omocodia "omocodia") problem
+2. To verify the *existence* of a fiscal code you can use [this](https://telematici.agenziaentrate.gov.it/VerificaCF/Scegli.do?parameter=verificaCf "VerificaCf") service
