@@ -50,5 +50,5 @@ bool result = fiscalCode.isValid(gender: Gender.Male); // false
 ```
 
 ### Notes
-The validation method considers the [omocodia](https://it.wikipedia.org/wiki/Omocodia "omocodia") problem
+The validation method considers the [omocodia](https://it.wikipedia.org/wiki/Omocodia "omocodia") problem<br>
 To verify the *existence* of a fiscal code you can use [this](https://telematici.agenziaentrate.gov.it/VerificaCF/Scegli.do?parameter=verificaCf "VerificaCf") service
