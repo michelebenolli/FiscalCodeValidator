@@ -34,13 +34,17 @@ namespace FiscalCodeValidator.Tests.Data
         public override IEnumerable<object[]> GetData(MethodInfo testMethod)
         {
             if (testMethod == null)
+            {
                 throw new ArgumentNullException(nameof(testMethod));
+            }
 
             // Get the absolute path to the JSON file
             var path = Path.GetRelativePath(Directory.GetCurrentDirectory(), _path);
 
             if (!File.Exists(path))
+            {
                 throw new ArgumentException($"Could not find file at path: {path}");
+            }
 
             var fileData = File.ReadAllText(_path);
 

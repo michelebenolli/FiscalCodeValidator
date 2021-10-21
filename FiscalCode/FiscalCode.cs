@@ -19,10 +19,14 @@ namespace FiscalCodeValidator
         public FiscalCode(string code)
         {
             if (string.IsNullOrEmpty(code))
+            {
                 throw new ArgumentException(null, nameof(code));
+            }
 
             if (!Regex.Match(code, "[a-zA-Z0-9]{16}").Success)
+            {
                 return;
+            }
 
             Code = Utility.Clean(code);
             _code = Normalize(Code);
@@ -95,14 +99,18 @@ namespace FiscalCodeValidator
             Place place = null)
         {
             if (this.HasNullProperty())
+            {
                 return false;
+            }
 
             if ((lastName != null && !MatchLastName(lastName)) ||
                 (firstName != null && !MatchFirstName(firstName)) ||
                 (gender != null && !MatchGender(gender)) ||
                 (date != null && !MatchDate(date)) ||
                 (place != null && !MatchPlace(place)))
+            {
                 return false;
+            }
 
             var checkCode = GetCheckCode(Code);
             return Code.EndsWith(checkCode);
@@ -112,9 +120,13 @@ namespace FiscalCodeValidator
         {
             var result = new StringBuilder(code);
 
-            foreach (var i in new int[] { 6, 7, 9, 10, 12, 13, 14 })
+            foreach (var i in new [] { 6, 7, 9, 10, 12, 13, 14 })
+            {
                 if (Constants.OmocodeMap.ContainsKey(code[i]))
+                {
                     result[i] = Constants.OmocodeMap[code[i]];
+                }
+            }
 
             result[15] = GetCheckCode(result.ToString());
             return result.ToString();
@@ -124,14 +136,18 @@ namespace FiscalCodeValidator
         {
             var name = _code.Substring(0, 3);
             if (IsValidNameCode(name))
+            {
                 LastName = name;
+            }
         }
 
         private void TrySetFirstName()
         {
             var name = _code.Substring(3, 3);
             if (IsValidNameCode(name))
+            {
                 FirstName = name;
+            }
         }
 
         private void TrySetGender()
@@ -140,10 +156,14 @@ namespace FiscalCodeValidator
             if (result)
             {
                 if (day > 0 && day < 32)
+                {
                     Gender = Models.Gender.Male;
+                }
 
                 if (day > 40 && day < 72)
+                {
                     Gender = Models.Gender.Female;
+                }
             }
         }
 
@@ -160,7 +180,9 @@ namespace FiscalCodeValidator
 
                 if (DateTime.TryParseExact($"{year}/{month}/{day}", "yyyy/M/d",
                     CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date))
+                {
                     Date = date;
+                }
             }
         }
 

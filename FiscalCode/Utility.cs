@@ -18,11 +18,14 @@ namespace FiscalCodeValidator
             return LoadJsonData<List<Province>>("provinces");
         }
 
-        public static List<Place> GetPlaces(string province = null)
+        public static List<Place> GetPlaces()
         {
-            var places = LoadJsonData<List<Place>>("places");
-            return province is null ? places :
-                places.Where(x => x.Province == province).ToList();
+            return LoadJsonData<List<Place>>("places");
+        }
+
+        public static List<Place> GetPlaces(string province)
+        {
+            return GetPlaces().Where(x => x.Province == province).ToList();
         }
 
         public static Place GetPlace(string code)
@@ -33,13 +36,13 @@ namespace FiscalCodeValidator
         // Extract vowels from the given string
         public static string GetVowels(string input)
         {
-            return Regex.Replace(input.ToUpper(), "[B-DF-HJ-NP-TV-Z]*", "");
+            return Regex.Replace(input.ToUpperInvariant(), "[B-DF-HJ-NP-TV-Z]*", "");
         }
 
         // Extract consonants from the given string
         public static string GetConsonants(string input)
         {
-            return Regex.Replace(input.ToUpper(), "[AEIOU]*", "");
+            return Regex.Replace(input.ToUpperInvariant(), "[AEIOU]*", "");
         }
 
         // Check if the given class has a null property
@@ -53,7 +56,7 @@ namespace FiscalCodeValidator
         {
             input = new String(input.Where(char.IsLetterOrDigit).ToArray());
             input = RemoveDiacritics(input);
-            return input.Trim().ToUpper();
+            return input.Trim().ToUpperInvariant();
         }
 
         // Remove all the diacritics from the given input
@@ -66,7 +69,9 @@ namespace FiscalCodeValidator
             {
                 var category = CharUnicodeInfo.GetUnicodeCategory(character);
                 if (category != UnicodeCategory.NonSpacingMark)
+                {
                     result.Append(character);
+                }
             }
             return result.ToString().Normalize(NormalizationForm.FormC);
         }

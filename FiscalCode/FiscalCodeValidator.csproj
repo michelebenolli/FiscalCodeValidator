@@ -9,10 +9,15 @@
     <Authors>Michele Benolli</Authors>
     <Company>Graffiti</Company>
     <PackageTags>Fiscal Code, Validator</PackageTags>
-    <Description></Description>
+    <Description>Fiscal Code Validator can be used to perform a syntactic validation of Italian fiscal codes.</Description>
     <PackageIcon>id-card.png</PackageIcon>
     <PackageIconUrl />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/michelebenolli/FiscalCodeValidator</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Michele Benolli</Copyright>
+    <PackageProjectUrl>https://github.com/michelebenolli/FiscalCodeValidator</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
