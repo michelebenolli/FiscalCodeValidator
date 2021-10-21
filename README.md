@@ -1,4 +1,7 @@
 # FiscalCodeValidator
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/808426d051784a5f9e24ed601ae89c9a)](https://app.codacy.com/gh/michelebenolli/FiscalCodeValidator?utm_source=github.com&utm_medium=referral&utm_content=michelebenolli/FiscalCodeValidator&utm_campaign=Badge_Grade_Settings)
+
 Fiscal Code Validator can be used to perform a syntactic validation of [Italian fiscal codes](https://en.wikipedia.org/wiki/Italian_fiscal_code "Italian fiscal codes").
 
 ## FiscalCode
