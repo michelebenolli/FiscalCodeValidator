@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiscalCodeValidator", "FiscalCodeValidator\FiscalCodeValidator.csproj", "{03270498-1D12-4356-BCF1-022FE6232F1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiscalCodeValidator.Tests", "FiscalCodeValidator.Tests\FiscalCodeValidator.Tests.csproj", "{3A162510-5D6D-4426-9656-F3BCFDC13159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiscalCodeValidator.Tests", "FiscalCodeValidator.Tests\FiscalCodeValidator.Tests.csproj", "{3A162510-5D6D-4426-9656-F3BCFDC13159}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

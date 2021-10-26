@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -78,8 +77,8 @@ namespace FiscalCodeValidator
 
         private static T LoadJsonData<T>(string fileName)
         {
-            var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using (var reader = new StreamReader($"{directory}/Data/{fileName}.json"))
+            var path = Path.Combine("Data", $"{fileName}.json");
+            using (var reader = new StreamReader(path))
             {
                 var serializer = new DataContractJsonSerializer(typeof(T));
                 return (T)serializer.ReadObject(reader.BaseStream);

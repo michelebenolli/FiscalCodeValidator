@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Michele Benolli</Authors>
+    <Company>Graffiti</Company>
+    <Description>Fiscal Code Validator can be used to perform a syntactic validation of Italian fiscal codes.</Description>
+    <Copyright>Michele Benolli</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/michelebenolli/FiscalCodeValidator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/michelebenolli/FiscalCodeValidator</RepositoryUrl>
+    <PackageTags>Fiscal Code, Validator, Codice Fiscale</PackageTags>
+    <PackageIcon>fiscal-code.png</PackageIcon>
+    <PackageIconUrl />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +22,10 @@
     </None>
     <None Update="Data\provinces.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="\\dc01.graffiti.local\UsersFolders$\MicheleBenolli\Desktop\ciao\fiscal-code.png" Link="Data\fiscal-code.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
