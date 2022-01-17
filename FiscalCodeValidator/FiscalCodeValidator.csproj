@@ -13,20 +13,26 @@
     <PackageIcon>fiscal-code.png</PackageIcon>
     <PackageIconUrl />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.1</Version>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Data\places.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\provinces.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="\\dc01.graffiti.local\UsersFolders$\MicheleBenolli\Desktop\ciao\fiscal-code.png" Link="Data\fiscal-code.png">
+    <None Remove="Data\fiscal-code.png" />
+    <None Remove="Data\places.json" />
+    <None Remove="Data\provinces.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\fiscal-code.png">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\places.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\provinces.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
